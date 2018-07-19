@@ -42,7 +42,7 @@ clear
 sleep 1
 echo -e "\033[01;32m INICIANDO....."
 sleep 1
-ovpn
+source
 fi
 if [ "$solo" = "n" ]; then
 clear

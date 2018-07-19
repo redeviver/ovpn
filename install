@@ -35,14 +35,14 @@ echo -e "\033[01;31m "
 read -p "DESEJA INICIAR INSTALAÇAO DO OPENVPN-SOLO? (s|n): " solo
 if [ "$solo" = "s" ]; then
 clear
-rm /bin/source/ &>/dev/null
-wget -O /bin/source -o /dev/null https://raw.githubusercontent.com/Darkbot345/OVPN/master/source
-chmod +x /bin/source
+rm /bin/ovpn/ &>/dev/null
+wget -O /bin/ovpn -o /dev/null https://raw.githubusercontent.com/Darkbot345/OVPN/master/ovpn
+chmod +x /bin/ovpn
 clear
 sleep 1
 echo -e "\033[01;32m INICIANDO....."
 sleep 1
-source
+ovpn
 fi
 if [ "$solo" = "n" ]; then
 clear

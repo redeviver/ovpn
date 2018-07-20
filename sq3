@@ -71,6 +71,9 @@ rm -rf /tmp/spt
  fi
 else
 spt="80"
+spt2="8080"
+spt3="8799"
+spt4="3128"
 fi
 
 _portas="/tmp/$RANDOM"
@@ -81,6 +84,7 @@ echo "$spt2" >> $_portas2
 echo "$spt3" >> $_portas2
 echo "$spt4" >> $_portas2
 
+clear
 echo -e "$cyanClaro
 INSTALADOR DO PROXY SQUID
 $fim"
@@ -88,6 +92,7 @@ read -p "ENTER PARA PROSSEGUIR"
 read -p "Digite seu IP: " -e -i $AIP ip
 echo -e "$cyanClaro
 Instalando SQUID3...$fim"
+clear
 apt-get update -y 1>/dev/null 2>/dev/null
 apt-get upgrade -y 1>/dev/null 2>/dev/null
 apt-get install squid3 -y 1>/dev/null 2>/dev/null

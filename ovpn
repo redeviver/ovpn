@@ -830,7 +830,7 @@ read -p "[s/n]
 if [ "$sinounot" = "s" ]; then
 echo -e "\033[1;31mDIGITE O NOVO HOST\033[0m"
 echo -e "\033[1;31mÉ necessário que ele comece com um .\033[0m"
-echo -e "\033[1;31mExemplo: .portalrecarga.vivo.com.br/recarga/home\033[0m"
+echo -e "\033[1;31mExemplo: .claromusica.com/\033[0m"
 read -p "Digite o Host: " hostx
  else
 hostx="m.facebook.com"

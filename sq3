@@ -71,9 +71,6 @@ rm -rf /tmp/spt
  fi
 else
 spt="80"
-spt2="8080"
-spt3="3128"
-spt4="8799"
 fi
 
 _portas="/tmp/$RANDOM"
@@ -95,7 +92,7 @@ apt-get update -y 1>/dev/null 2>/dev/null
 apt-get upgrade -y 1>/dev/null 2>/dev/null
 apt-get install squid3 -y 1>/dev/null 2>/dev/null
 echo -e "$azulClaro
-INICIANDO INSTALAÃ‡AO...$fim"
+INICIANDO INSTALAÇÃO...$fim"
 sleep 3s
 echo -e "\033[0m"
 sleep 1s
@@ -114,7 +111,7 @@ else
 echo -e "\033[1;36mQUAL SISTEMA ESTA USANDO?
 [1] DEBIAN
 [2] UBUNTO"
-read -p "opÃ§Ã£o: " opt
+read -p "opção: " opt
   fi
 fi
 
@@ -148,8 +145,9 @@ echo -e ".bookclaro.com.br/
 .vivo.com.br/
 .rdio.com/
 .compute-1.amazonaws.com/
-.portalrecarga.vivo.com.br/
-.vivo.ddivulga.com/" > /etc/payloads
+.portalrecarga.vivo.com.br/recarga/home
+.vivo.ddivulga.com/
+portalrecarga.vivo.com.br/recarga/home" > /etc/payloads
 ###FIMPAYLOADS###
 
 ##SYS###DEBIAN
@@ -183,7 +181,7 @@ pipeline_prefetch on
 " > /etc/squid3/squid.conf
 echo -e "$azulClaro
 CONFIGURANDO...$fim"
-echo -e "$cyanClaro REINICIANDO SERVIÃ‡OS...$fim"
+echo -e "$cyanClaro REINICIANDO SERVIÇOS...$fim"
 squid3 -k reconfigure 1>/dev/null 2>/dev/null
 service ssh restart 1>/dev/null 2>/dev/null
 service squid3 restart 1>/dev/null 2>/dev/null
@@ -221,7 +219,7 @@ pipeline_prefetch on
 sleep 1s
 echo -e "$azulClaro
 CONFIGURANDO...$fim"
-echo -e "$cyanClaro REINICIANDO SERVIÃ‡OS...$fim"
+echo -e "$cyanClaro REINICIANDO SERVIÇOS...$fim"
 squid -k reconfigure 1>/dev/null 2>/dev/null
 service ssh restart 1>/dev/null 2>/dev/null
 service squid restart 1>/dev/null 2>/dev/null
@@ -238,11 +236,11 @@ rm $_portas2
 echo -e "$fim"
 sleep 1s
 if [ "$eth" != "" ]; then
-echo -e "\033[1;36mAplicar Sistema Para Melhorar Pacotes Ssh? Pode Ocorrer Erros no ssh por conta dessa opÃ§Ã£o!
+echo -e "\033[1;36mAplicar sistema para melhorar pacotes ssh? Pode ocorrer erros no ssh por conta dessa opção!
 [s/n]\033[0m"
 read -p ": " ssh
 if [ "$ssh" = "s" ]; then
-echo -e "$verde CorreÃ§Ã£o de problemas de pacotes no SSH...$fim"
+echo -e "$verde Correção de problemas de pacotes no SSH...$fim"
 apt-get install ethtool -y 1>/dev/null 2>/dev/null
 interface="$eth"
  if [ "$interface" = "" ]

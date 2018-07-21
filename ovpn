@@ -164,6 +164,7 @@ touch /etc/VpsPackdir/limite/$CLIENT
 echo -e "$senha" > /etc/VpsPackdir/senha/$CLIENT
 echo -e "OPENVPN" > /etc/VpsPackdir/limite/$CLIENT
 echo -e "\033[1;36mCRIADO COM SUCESSO \033[0m"
+echo -e "\033[1;36mPara encontrar o arquivo vá no menu do ADM>2>8 \033[0m"
 sleep 4s
 ovpn
 exit
@@ -175,6 +176,7 @@ touch /etc/VpsPackdir/limite/$CLIENT
 echo -e "$senha" > /etc/VpsPackdir/senha/$CLIENT
 echo -e "OPENVPN" > /etc/VpsPackdir/limite/$CLIENT
 echo -e "\033[1;36mCRIADO COM SUCESSO \033[0m"
+echo -e "\033[1;36mPara encontrar o arquivo vá no menu do ADM>2>8 \033[0m"
 ovpn
 exit
 fi

@@ -1,4 +1,7 @@
 #!/bin/bash
+#R3V1V3R
+#@judiba
+
 if readlink /proc/$$/exe | grep -qs "dash"; then
 	echo "This script needs to be run with bash, not sh"
 	exit 1
@@ -106,9 +109,9 @@ else
 fi
 
 clear
-echo -e "\033[36;37m PAINEL DE GERENCIAMENTO DO OPENVPN, OS ARQUIVOS SERÃO SALVOS NA PASTA ROOT\033[0m"
-echo -e "\033[01;31m BY @e8th4eve, @Fenix_linuxr"
-echo -e "\033[01;31m Modificações e adaptações por Kingsman"
+echo -e "\033[36;35m PAINEL DE GERENCIAMENTO DO OPENVPN, OS ARQUIVOS SERÃO SALVOS NA PASTA ROOT\033[0m"
+echo -e "\033[01;33m R3V1V3R 1NT3RN3T L1VR3 BY @judiba"
+echo -e "\033[01;33m Modificações e adaptações por JUDIBA"
 echo -e "\033[0;35m------------------------------------------------------------\033[0m"
 echo -e "\033[1;36m[\033[1;31m1\033[1;36m] CRIAR USUÁRIO \033[1;30m(CRIA USUÁRIOS)\033[1;36m
 [\033[1;31m2\033[1;36m] REMOVER USUÁRIO \033[1;30m(REMOVE UM USUÁRIO)\033[1;36m
@@ -611,7 +614,7 @@ echo ""
 		rm -rf /etc/openvpn/easy-rsa/
 	fi
 	# Adquirindo easy-rsa
-	wget -O ~/EasyRSA-3.0.1.tgz "https://www.dropbox.com/s/dph6fgqecnukm1b/EasyRSA-3.0.1.tgz"
+	wget -O ~/EasyRSA-3.0.1.tgz "https://github.com/Everton-8/OVPN/raw/master/EasyRSA-3.0.1.tgz"
 	tar xzf ~/EasyRSA-3.0.1.tgz -C ~/
 	mv ~/EasyRSA-3.0.1/ /etc/openvpn/
 	mv /etc/openvpn/EasyRSA-3.0.1/ /etc/openvpn/easy-rsa/
@@ -803,7 +806,7 @@ echo -e "\033[1;31mNÃO FOI IDENTIFICADO PROXY SQUID EM SUA VPS, DESEJA INSTALÁ
 read -p "[s/n] 
 " squiid
 if [ "$squiid" = "s" ]; then
-wget  -O /bin/sq3 -o /dev/null https://raw.githubusercontent.com/Darkbot345/OVPN/master/sq3
+wget  -O /bin/sq3 -o /dev/null https://raw.githubusercontent.com/Everton-8/OVPN/master/sq3
 chmod +x /bin/sq3
 sleep 1
 sq3
@@ -826,7 +829,7 @@ xyz="80"
 fi
 ;;
 esac
-echo -e "\033[1;31mO HOST DO ARQUIVO PADRÃO É \033[1;33mm.facebook.com\033[1;31m DESEJA ALTERAR?\033[0m"
+echo -e "\033[1;31mO HOST DO ARQUIVO PADRÃO É \033[1;33mportalrecarga.vivo.com.br/recarga/home\033[1;31m DESEJA ALTERAR?\033[0m"
 read -p "[s/n]
 " sinounot
 if [ "$sinounot" = "s" ]; then
@@ -835,7 +838,7 @@ echo -e "\033[1;31mÉ necessário que ele comece com um .\033[0m"
 echo -e "\033[1;31mExemplo: .claromusica.com/\033[0m"
 read -p "Digite o Host: " hostx
  else
-hostx="m.facebook.com"
+hostx="portalrecarga.vivo.com.br/recarga/home"
 sleep 2s
 fi
 ################################

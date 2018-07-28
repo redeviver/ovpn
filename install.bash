@@ -35,7 +35,7 @@ else
 	exit 5
 fi
 echo -e "\033[01;31m "
-read -p "DESEJA INICIAR INSTALAÇAO DO OPENVPN-SOLO? (s|n): " solo
+read -p "ESCOLHA 's' PARA OPENVPN E 'n' PARA AUTO-INSTALLER COMPLETO (s|n): " solo
 if [ "$solo" = "s" ]; then
 clear
 rm /bin/ovpn/ &>/dev/null
@@ -49,7 +49,7 @@ ovpn
 fi
 if [ "$solo" = "n" ]; then
 clear
-echo -e "\033[01;31m ABORTADO....."
+echo -e "\033[01;31m MUDANDO PARA AUTO-INSTALLER..."
 sleep 2
 clear
 fi

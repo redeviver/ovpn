@@ -59,7 +59,7 @@ wget https://raw.githubusercontent.com/redeviver/auto-installer/master/debian.sh
 chmod +x debian.sh
 clear
 echo -e "\033[01;31m "
-echo "Agora será iniciada a instalação do AUTO-INSTALLER"
+echo "Primeiro será iniciada a instalação do AUTO-INSTALLER"
 read -p "Aperte enter para continuar..." enter
 clear
 ./debian.sh

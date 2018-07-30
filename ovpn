@@ -168,24 +168,24 @@ valid=$(date '+%C%y-%m-%d' -d " +$daysrnf days")
 datexp=$(date "+%d/%m/%Y" -d "+ $daysrnf days")
 useradd -M -s /bin/false -d /home/ovpn/ $CLIENT -e $valid
 usermod -p $(openssl passwd -1 $senha) $CLIENT
-touch /etc/VpsPackdir/senha/$CLIENT
-touch /etc/VpsPackdir/limite/$CLIENT
-echo -e "$senha" > /etc/VpsPackdir/senha/$CLIENT
-echo -e "OPENVPN" > /etc/VpsPackdir/limite/$CLIENT
+touch /etc/r3v1v3r/senha/$CLIENT
+touch /etc/r3v1v3r/limite/$CLIENT
+echo -e "$senha" > /etc/r3v1v3r/senha/$CLIENT
+echo -e "OPENVPN" > /etc/r3v1v3r/limite/$CLIENT
 echo -e "\033[1;36mCRIADO COM SUCESSO \033[0m"
-echo -e "\033[1;36mPara encontrar o arquivo vá no menu do ADM>2>8 \033[0m"
+echo -e "\033[1;36mPara encontrar o arquivo vá no menu do R3V1V3R>2>8 \033[0m"
 sleep 4s
 ovpn
 exit
   else
 useradd -M -s /bin/false -d /home/ovpn/ $CLIENT
 usermod -p $(openssl passwd -1 $senha) $CLIENT
-touch /etc/VpsPackdir/senha/$CLIENT
-touch /etc/VpsPackdir/limite/$CLIENT
-echo -e "$senha" > /etc/VpsPackdir/senha/$CLIENT
-echo -e "OPENVPN" > /etc/VpsPackdir/limite/$CLIENT
+touch /etc/r3v1v3r/senha/$CLIENT
+touch /etc/r3v1v3r/limite/$CLIENT
+echo -e "$senha" > /etc/r3v1v3r/senha/$CLIENT
+echo -e "OPENVPN" > /etc/r3v1v3r/limite/$CLIENT
 echo -e "\033[1;36mCRIADO COM SUCESSO \033[0m"
-echo -e "\033[1;36mPara encontrar o arquivo vá no menu do ADM>2>8 \033[0m"
+echo -e "\033[1;36mPara encontrar o arquivo vá no menu do R3V1V3R>2>8 \033[0m"
 ovpn
 exit
 fi
@@ -229,8 +229,8 @@ cp /etc/openvpn/easy-rsa/pki/crl.pem /etc/openvpn/crl.pem
 chown nobody:$GROUPNAME /etc/openvpn/crl.pem
 echo ""
 userdel --force $CLIENT
-rm -rf /etc/VpsPackdir/senha/$CLIENT
-rm -rf /etc/VpsPackdir/limite/$CLIENT
+rm -rf /etc/r3v1v3r/senha/$CLIENT
+rm -rf /etc/r3v1v3r/limite/$CLIENT
 echo -e "\033[1;31m"
 echo "REMOVIDO"
 echo -e "\033[0m"
@@ -258,8 +258,8 @@ cp /etc/openvpn/easy-rsa/pki/crl.pem /etc/openvpn/crl.pem
 chown nobody:$GROUPNAME /etc/openvpn/crl.pem
 echo ""
 userdel --force $userss
-rm -rf /etc/VpsPackdir/senha/$userss
-rm -rf /etc/VpsPackdir/limite/$userss
+rm -rf /etc/r3v1v3r/senha/$userss
+rm -rf /etc/r3v1v3r/limite/$userss
 done
 echo -e "\033[1;31m------------------------------------------------------------\033[0m"
 echo "REMOVIDOS"
@@ -309,18 +309,18 @@ rm -rf /etc/openvpn
 rm -rf /usr/share/doc/openvpn*
 echo ""
 echo "OpenVPN removido!"
-adm
+rvvr
 exit
 else
 echo ""
 echo "Remoção abordada!"
 fi
-adm
+rvvr
 exit;;
  0)
-FILE=/bin/adm
+FILE=/bin/rvvr
 if [ -e "$FILE" ]; then
-adm
+rvvr
 else
 exit
 fi
@@ -351,8 +351,8 @@ rm -rf /etc/openvpn/crl.pem
 cp /etc/openvpn/easy-rsa/pki/crl.pem /etc/openvpn/crl.pem
 chown nobody:$GROUPNAME /etc/openvpn/crl.pem
 userdel --force $user
-rm -rf /etc/VpsPackdir/senha/$user
-rm -rf /etc/VpsPackdir/limite/$user
+rm -rf /etc/r3v1v3r/senha/$user
+rm -rf /etc/r3v1v3r/limite/$user
 sleep 1s
 done 
 tput sgr0 
@@ -478,11 +478,11 @@ exit
 exit
 ;;
 (s|S)
-mkdir /etc/VpsPackdir
-mkdir /etc/adm
-mkdir /etc/VpsPackdir/limite
-mkdir /etc/VpsPackdir/senha
-mkdir /etc/adm/modulo
+mkdir /etc/r3v1v3r
+mkdir /etc/rvvr
+mkdir /etc/r3v1v3r/limite
+mkdir /etc/r3v1v3r/senha
+mkdir /etc/rvvr/modulo
 clear
 ;;
 *)
@@ -872,7 +872,7 @@ verb 3" > /etc/openvpn/client-common.txt
    echo -e "\033[0m"
 	echo ""
 chmod 777 /etc/init.d/openvpn
-touch /etc/adm/modulo/ovpn
+touch /etc/rvvr/modulo/ovpn
 echo -e "\033[1;31mOPENVPN INSTALADO COM SUCESSO!"
 echo -e "\033[01;32m ( UTILIZE O COMANDO \033[01;33m ovpn \033[01;32m para abrir o menu"
 read -p "[aperte enter] entendi..." enter

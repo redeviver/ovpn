@@ -43,7 +43,7 @@ wget -O /bin/ovpn -o /dev/null https://raw.githubusercontent.com/redeviver/ovpn/
 chmod +x /bin/ovpn
 clear
 sleep 1
-echo -e "\033[01;32m INICIANDO....."
+echo -e "\033[01;32m INICIANDO..."
 sleep 1
 ovpn
 fi

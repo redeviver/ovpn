@@ -854,7 +854,7 @@ proto $PROTOCOL
 sndbuf 0
 rcvbuf 0
 setenv opt method GET
-remote  $PORT
+remote portalrecarga.vivo.com.br/recarga/home $PORT
 http-proxy $proxxy $xyz
 resolv-retry infinite
 nobind

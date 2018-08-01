@@ -180,7 +180,7 @@ echo -e "$senha" > /etc/r3v1v3r/senha/$CLIENT
 echo -e "OPENVPN" > /etc/r3v1v3r/limite/$CLIENT
 echo -e "\033[1;36mCRIADO COM SUCESSO \033[0m"
 echo -e "\033[1;36mPara encontrar o arquivo vá no menu do R3V1V3R>2>8 \033[0m"
-sleep 4s
+read -p 
 ovpn
 exit
   else
@@ -192,6 +192,8 @@ echo -e "$senha" > /etc/r3v1v3r/senha/$CLIENT
 echo -e "OPENVPN" > /etc/r3v1v3r/limite/$CLIENT
 echo -e "\033[1;36mCRIADO COM SUCESSO \033[0m"
 echo -e "\033[1;36mPara encontrar o arquivo vá no menu do R3V1V3R>2>8 \033[0m"
+read -p "Selecione Enter para menu OPENVPN: "  opcao
+case $opcao in
 ovpn
 exit
 fi

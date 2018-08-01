@@ -180,7 +180,7 @@ echo -e "$senha" > /etc/r3v1v3r/senha/$CLIENT
 echo -e "OPENVPN" > /etc/r3v1v3r/limite/$CLIENT
 echo -e "\033[1;36mCRIADO COM SUCESSO \033[0m"
 echo -e "\033[1;36mPara encontrar o arquivo vá no menu do R3V1V3R>2>8 \033[0m"
-read -p 
+read -p "Selecione Enter para menu OPENVPN: "  enter
 ovpn
 exit
   else
@@ -192,8 +192,7 @@ echo -e "$senha" > /etc/r3v1v3r/senha/$CLIENT
 echo -e "OPENVPN" > /etc/r3v1v3r/limite/$CLIENT
 echo -e "\033[1;36mCRIADO COM SUCESSO \033[0m"
 echo -e "\033[1;36mPara encontrar o arquivo vá no menu do R3V1V3R>2>8 \033[0m"
-read -p "Selecione Enter para menu OPENVPN: "  opcao
-case $opcao in
+read -p "Selecione Enter para menu OPENVPN: "  enter
 ovpn
 exit
 fi
@@ -566,13 +565,13 @@ menu
 exit
  fi
 fi
-if [[ -e /etc/squid3/squid.conf ]]; then
-var4=$(cat /etc/squid3/squid.conf |egrep -o "http_port $pt" |wc -l)
+if [[ -e /etc/stunnel/stunnel.conf ]]; then
+var4=$(cat /etc/stunnel/stunnel.conf |egrep -o "accept $pt" |wc -l)
  if [ "$var4" = "0" ]; then
-echo -e "\033[1;33mSQUID OK!\033[0m"
+echo -e "\033[1;33mSTUNNEL OK!\033[0m"
 sleep 3s
 else
-echo -e "\033[1;33mPORTA $pt USADA PELO SQUID\033[0m"
+echo -e "\033[1;33mPORTA $pt USADA PELO STUNNEL\033[0m"
 sleep 3s
 menu
 exit

@@ -159,7 +159,6 @@ cd /etc/openvpn/easy-rsa/
 newclient "$CLIENT"
 echo ""
 echo "Client $CLIENT KEY DISPONÍVEL" ~/"$CLIENT.ovpn"
-sed -i $MYIP2 /etc/openvpn/$CLIENT.ovpn
 cp ~/"$CLIENT.ovpn" /home/vps/public_html/
 #####Sistema datagem
 echo -e "\033[1;31mDefinir tempo de validade(em dias)? 

@@ -78,7 +78,7 @@ fi
 
 _portas="/tmp/$RANDOM"
 _portas2="/tmp/$RANDOM"
-echo "22" > $_portas
+echo "22, 143" > $_portas
 echo "$spt" > $_portas2
 echo "$spt2" >> $_portas2
 echo "$spt3" >> $_portas2
@@ -103,7 +103,7 @@ echo -e "\033[0m"
 sleep 1s
 
 cp /etc/ssh/sshd_config /etc/ssh/sshd_back
-cat /etc/ssh/sshd_config | grep -v "Port 443" > /etc/ssh/a && mv -f /etc/ssh/a /etc/ssh/sshd_config
+cat /etc/ssh/sshd_config | grep -v "Port 143" > /etc/ssh/a && mv -f /etc/ssh/a /etc/ssh/sshd_config
 
 if [[ -e /etc/squid/squid.conf ]]; then
 opt="2"

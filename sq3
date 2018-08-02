@@ -242,7 +242,7 @@ echo -e "$fim"
 sleep 1s
 if [ "$eth" != "" ]; then
 echo -e "\033[1;36mAplicar sistema para melhorar pacotes ssh? Pode ocorrer erros no ssh por conta dessa opção!
-[s/n]\033[0m"
+[s/n]\033[1;32m"
 read -p ": " ssh
 if [ "$ssh" = "s" ]; then
 echo -e "$verde Correção de problemas de pacotes no SSH...$fim"

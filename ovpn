@@ -469,8 +469,8 @@ chmod 777 /etc/init.d/openvpn
 /etc/init.d/openvpn start
 ;;
  *)
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%44s%s%-20s\n' "OPÇÃO INVÁLIDA..." ; tput sgr0
-sleep 1
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-18s\n' "OPÇÃO INVÁLIDA..." ; tput sgr0
+sleep 3
 exit;;
 esac
 	done

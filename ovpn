@@ -119,6 +119,7 @@ echo -e "\033[01;34m                   R3V1V3R 1NT3RNET L1VR3      \033[1;33m"
 echo ""
 echo -e "\033[36;35m PAINEL DE GERENCIAMENTO DO OPENVPN"
 echo -e "\033[01;33m OS ARQUIVOS SERÃO SALVOS NA PASTA ROOT\033[0m"
+echo -e "\033[01;33m E TAMBÉM PELO http://$IP:81/r3v1v3r.ovpn"
 echo -e "\033[01;33m R3V1V3R 1NT3RN3T L1VR3 BY @judiba"
 echo -e "\033[01;33m Modificações e adaptações por JUDIBA"
 echo -e ""
@@ -237,6 +238,8 @@ echo ""
 userdel --force $CLIENT
 rm -rf /etc/r3v1v3r/senha/$CLIENT
 rm -rf /etc/r3v1v3r/limite/$CLIENT
+rm -rf ~/$CLIENT.ovpn
+rm -rf /home/vps/public_html/$CLIENT.ovpn
 echo -e "\033[1;31m"
 echo "REMOVIDO"
 echo -e "\033[0m"
@@ -266,6 +269,7 @@ echo ""
 userdel --force $userss
 rm -rf /etc/r3v1v3r/senha/$userss
 rm -rf /etc/r3v1v3r/limite/$userss
+rm -rf /home/vps/public_html/$CLIENT.ovpn
 done
 echo -e "\033[1;31m------------------------------------------------------------\033[0m"
 echo "REMOVIDOS"

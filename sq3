@@ -33,7 +33,7 @@ eth=$(ifconfig | grep -v inet6 | grep -v lo | grep -v 127.0.0.1 | grep "encap:Et
 #identificacao automatica do ip
 AIP=$(ip addr | grep 'inet' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
 if [[ "$AIP" = "" ]]; then
-		AIP=$(wget -qO- ipv4.icanhazip.com)
+ AIP=$(wget -qO- ipv4.icanhazip.com)
 fi
 ##VERIFICACAO DAS PORTAS##
 if [ -e /etc/default/dropbear ]; then
@@ -179,7 +179,7 @@ http_port $spt2
 http_port $spt3
 http_port $spt4
 
-visible_hostname PROXYSERVER
+visible_hostname r3v1v3r.pr0xy
 
 forwarded_for off
 pipeline_prefetch on
@@ -216,7 +216,7 @@ http_port $spt2
 http_port $spt3
 http_port $spt4
 
-visible_hostname PROXYSERVER
+visible_hostname r3v1v3r.pr0xy
 
 forwarded_for off
 pipeline_prefetch on

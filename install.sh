@@ -1,6 +1,7 @@
 #!/bin/bash
 # OpenVPN instalador para Debian, Ubuntu e CentOS
-# Esse script irá trabalhar no Debian, Ubuntu, CentOS e provavelmente outros distros # das mesmas famílias, embora nenhum suporte é oferecido para eles.
+# Esse script irá trabalhar no Debian, Ubuntu, CentOS e provavelmente outros distros 
+# das mesmas famílias, embora nenhum suporte é oferecido para eles.
 # mas irá funcionar se você simplesmente deseja configurar uma VPN no 
 # seu Debian/Ubuntu/CentOS. Ele foi projetado para ser tão
 # discreto e universal quanto possível.
@@ -123,7 +124,7 @@ if [[ -e /etc/openvpn/server.conf ]]; then
 			;;
 			3) 
 			echo ""
-			read -p "Você deseja remover Essa porra de OpenVPN? [y/n]: " -e -i n REMOVE
+			read -p "Você deseja remover mesmo o OpenVPN? [y/n]: " -e -i n REMOVE
 			if [[ "$REMOVE" = 'y' ]]; then
 				PORT=$(grep '^port ' /etc/openvpn/server.conf | cut -d " " -f 2)
 				PROTOCOL=$(grep '^proto ' /etc/openvpn/server.conf | cut -d " " -f 2)
@@ -160,7 +161,7 @@ if [[ -e /etc/openvpn/server.conf ]]; then
 				rm -rf /etc/openvpn
 				rm -rf /usr/share/doc/openvpn*
 				echo ""
-				echo "Essa porra foi removida!"
+				echo "O OpenVPN foi removido!"
 			else
 				echo ""
 				echo "Remoção abordada!"

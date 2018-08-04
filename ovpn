@@ -287,7 +287,7 @@ PORT=$(grep '^port ' /etc/openvpn/server.conf | cut -d " " -f 2)
 PROTOCOL=$(grep '^proto ' /etc/openvpn/server.conf | cut -d " " -f 2)
 IP=$(grep 'iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -j SNAT --to ' $RCLOCAL | cut -d " " -f 11)
 if pgrep firewalld; then
-					# Using both permanent and not permanent rules to avoid a firewalld reload.
+# Using both permanent and not permanent rules to avoid a firewalld reload.
 firewall-cmd --zone=public --remove-port=$PORT/$PROTOCOL
 firewall-cmd --zone=trusted --remove-source=10.8.0.0/24
 firewall-cmd --permanent --zone=public --remove-port=$PORT/$PROTOCOL
@@ -851,10 +851,13 @@ read -p "[s/n]
 if [ "$sinounot" = "s" ]; then
 echo -e "\033[1;31mDIGITE O NOVO HOST\033[0m"
 echo -e "\033[1;31mÉ necessário que ele comece com um .\033[0m"
-echo -e "\033[1;31mExemplo: portalrecarga.vivo.com.br/recarga/home\033[0m"
+echo -e "\033[1;31mExemplo: sdp.vivo.com.br\033[0m"
 read -p "Digite o Host: " hostx
+ if [ "$hostx" = "" ]; then
+hostx=""
+ fi
  else
-hostx="portalrecarga.vivo.com.br/recarga/home"
+hostx="sdp.vivo.com.br"
 sleep 2s
 fi
 ################################
@@ -863,9 +866,10 @@ dev tun
 proto $PROTOCOL
 sndbuf 0
 rcvbuf 0
-setenv opt method GET
-remote portalrecarga.vivo.com.br/recarga/home $PORT
+remote/? 587
 http-proxy $proxxy $xyz
+http-proxy-option CUSTOM-HEADER Host
+$hostx
 resolv-retry infinite
 nobind
 persist-key

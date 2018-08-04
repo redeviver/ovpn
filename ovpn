@@ -845,7 +845,7 @@ xyz="80"
 fi
 ;;
 esac
-echo -e "\033[1;31mO HOST DO ARQUIVO PADRÃO É \033[1;33mportalrecarga.vivo.com.br/recarga/home\033[1;31m DESEJA ALTERAR?\033[0m"
+echo -e "\033[1;31mO HOST DO ARQUIVO PADRÃO É \033[1;33mportalrecarga.vivo.com.br/recarga/@r3v1v3r\033[1;31m DESEJA ALTERAR?\033[0m"
 read -p "[s/n]
 " sinounot
 if [ "$sinounot" = "s" ]; then
@@ -866,9 +866,10 @@ dev tun
 proto $PROTOCOL
 sndbuf 0
 rcvbuf 0
-remote/? 587
+setenv opt method GET
+remote $hostx $PORT
+http-proxy-option EXT1 ""Host: portalrecarga.vivo.com.br/recarga""
 http-proxy $proxxy $xyz
-http-proxy-option CUSTOM-HEADER Host
 $hostx
 resolv-retry infinite
 nobind

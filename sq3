@@ -157,8 +157,8 @@ portalrecarga.vivo.com.br/recarga/home" > /etc/payloads
 
 ##SYS###DEBIAN
 if [ $opt -eq 1 ]; then
-echo '#ConfiguracaoSquiD
-acl url1 url_regex -i "/etc/payloads"
+echo "#ConfiguracaoSquiD
+acl url1 url_regex -i ""/etc/payloads""
 acl url2 dstdomain -i 127.0.0.1
 acl url3 dstdomain -i localhost
 acl url4 dstdomain -i $ip
@@ -183,7 +183,7 @@ visible_hostname r3v1v3r.pr0xy
 
 forwarded_for off
 pipeline_prefetch on
-' > /etc/squid3/squid.conf
+" > /etc/squid3/squid.conf
 echo -e "$azulClaro
 CONFIGURANDO...$fim"
 echo -e "$cyanClaro REINICIANDO SERVIÇOS...$fim"
@@ -194,8 +194,8 @@ sleep 1s
 fi
 
 if [ $opt -eq 2 ]; then
-echo '#ConfiguracaoSquiD
-acl url1 url_regex -i "/etc/payloads"
+echo "#ConfiguracaoSquiD
+acl url1 url_regex -i ""/etc/payloads""
 acl url2 dstdomain -i 127.0.0.1
 acl url3 dstdomain -i localhost
 acl url4 dstdomain -i $ip
@@ -220,7 +220,7 @@ visible_hostname r3v1v3r.pr0xy
 
 forwarded_for off
 pipeline_prefetch on
-' > /etc/squid/squid.conf
+" > /etc/squid/squid.conf
 sleep 1s
 echo -e "$azulClaro
 CONFIGURANDO...$fim"

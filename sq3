@@ -150,7 +150,7 @@ echo -e ".bookclaro.com.br/
 .vivo.com.br/
 .rdio.com/
 .compute-1.amazonaws.com/
-.portalrecarga.vivo.com.br/
+/portalrecarga.vivo.com.br/recarga/@r3v1v3r
 .vivo.ddivulga.com/
 portalrecarga.vivo.com.br/recarga/home" > /etc/payloads
 ###FIMPAYLOADS###

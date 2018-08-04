@@ -158,7 +158,7 @@ portalrecarga.vivo.com.br/recarga/home" > /etc/payloads
 ##SYS###DEBIAN
 if [ $opt -eq 1 ]; then
 echo "#ConfiguracaoSquiD
-acl url1 url_regex -i ""/etc/payloads""
+acl url1 url_regex -i '"/etc/payloads"'
 acl url2 dstdomain -i 127.0.0.1
 acl url3 dstdomain -i localhost
 acl url4 dstdomain -i $ip
@@ -195,7 +195,7 @@ fi
 
 if [ $opt -eq 2 ]; then
 echo "#ConfiguracaoSquiD
-acl url1 url_regex -i ""/etc/payloads""
+acl url1 url_regex -i '"/etc/payloads"'
 acl url2 dstdomain -i 127.0.0.1
 acl url3 dstdomain -i localhost
 acl url4 dstdomain -i $ip

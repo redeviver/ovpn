@@ -868,7 +868,7 @@ sndbuf 0
 rcvbuf 0
 setenv opt method GET
 remote $hostx $PORT
-http-proxy-option EXT1 ""Host: portalrecarga.vivo.com.br/recarga""
+http-proxy-option EXT1 Host: $hostx 
 http-proxy $proxxy $xyz
 $hostx
 resolv-retry infinite

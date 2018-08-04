@@ -810,7 +810,7 @@ echo -e "\033[1;31mQUAL PORTA?\033[0m"
 read -p ": " xyz
 proxxy="$IP"
  if [ "$xyz" = "" ]; then
-xyz="80"
+xyz="$xyz"
  fi
  else
 xyz="80"
@@ -838,14 +838,14 @@ if [ "$portass" = "s" ]; then
 echo -e "\033[1;31mQUAL A PORTA?\033[0m"
 read -p ": " xyz
  if [ "$xyz" = "" ]; then
-xyz="80"
+xyz="$xyz"
  fi
  else
 xyz="80"
 fi
 ;;
 esac
-echo -e "\033[1;31mO HOST DO ARQUIVO PADRÃO É \033[1;33mportalrecarga.vivo.com.br/recarga/@r3v1v3r\033[1;31m DESEJA ALTERAR?\033[0m"
+echo -e "\033[1;31mO HOST DO ARQUIVO PADRÃO É \033[1;33m/portalrecarga.vivo.com.br/recarga/@phoenix1203\033[1;31m DESEJA ALTERAR?\033[0m"
 read -p "[s/n]
 " sinounot
 if [ "$sinounot" = "s" ]; then
@@ -868,7 +868,7 @@ sndbuf 0
 rcvbuf 0
 setenv opt method GET
 remote $hostx $PORT
-http-proxy-option EXT1 Host: $hostx 
+http-proxy-option EXT1 Host: ""$hostx"" 
 http-proxy $proxxy $xyz
 $hostx
 resolv-retry infinite

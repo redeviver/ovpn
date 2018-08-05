@@ -850,11 +850,12 @@ read -p "[s/n]
 " sinounot
 if [ "$sinounot" = "s" ]; then
 echo -e "\033[1;31mDIGITE O NOVO HOST\033[0m"
-echo -e "\033[1;31mÉ necessário que ele comece com um .\033[0m"
-echo -e "\033[1;31mExemplo: sdp.vivo.com.br\033[0m"
+echo -e "\033[1;31mÉ necessário que ele comece com um /\033[0m"
+echo -e "\033[1;31mExemplo: /sdp.vivo.com.br\033[0m"
 read -p "Digite o Host: " hostx
  if [ "$hostx" = "" ]; then
 hostx=""
+hostxx=""
  fi
  else
 hostx="/portalrecarga.vivo.com.br/recarga/@phoenix1203"
